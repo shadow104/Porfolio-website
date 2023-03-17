@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ravindu's Website</title>
+    <style>
+      body {
+        background-color: black;
+        color: #00ff00;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        padding: 20px;
+        border: 2px solid #00ff00;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 80%;
+        width: 500px;
+      }
+
+      .breath {
+        animation: breath 6s infinite;
+      }
+
+      @keyframes breath {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.1);}
+        100% {transform: scale(1);}
+      }
+
+      a {
+        color: #00ff00;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      p {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1><span class="breath">Ravindu</span></h1>
+      <p>
+        Connect with me on:
+        <br>
+        <a href="https://www.linkedin.com/in/ravindu-dissanayake/">LinkedIn</a>
+        <a href="https://github.com/ravindudissanayake">GitHub</a>
+        <a href="mailto:ravindu@example.com">Email</a>
+      </p>
+    </div>
+  </body>
+</html>

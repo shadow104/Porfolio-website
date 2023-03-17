@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<style>
+		body {
+			background-color: black;
+			color: #0F0;
+			font-family: 'MatrixCode';
+			font-size: 12px;
+			text-align: center;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		h1 {
+			font-size: 40px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		.bordered {
+			border: 1px solid #0F0;
+			width: 90%;
+			max-width: 700px;
+			height: 90%;
+			max-height: 700px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 9px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.blink {
+			animation: blinker 1s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+		}
+		@keyframes blinker {
+			from {
+				opacity: 1.0;
+			}
+			to {
+				opacity: 0.0;
+			}
+		}
+		.link {
+			color: #0F0;
+			text-decoration: none;
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.link:hover {
+			text-decoration: underline;
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body>
+	<div class="bordered">
+        <pre>
+            __  __        _____ _    _ ______ ______ ______ 
+           |  \/  |      / ____| |  | |  ____|  ____|  ____|
+           | \  / |_   _| (___ | |__| | |__  | |__  | |__   
+           | |\/| | | | |\___ \|  __  |  __| |  __| |  __|  
+           | |  | | |_| |____) | |  | | |____| |____| |____ 
+           |_|  |_|\__, |_____/|_|  |_|______|______|______|
+                    __/ |                                    
+                   |___/                                     
+                      </pre>
+					  <h1><h1 class="blink">></h1>Contact me</h1>
+		<div>
+			<a href="https://www.linkedin.com/in/ravindu-perera" target="_blank" rel="noopener" class="link">LinkedIn</a>
+			<a href="https://github.com/ravinduperera" target="_blank" rel="noopener" class="link">GitHub</a>
+			<a href="#" onclick="revealEmail(); return false;" class="link">Contact</a>
+		</div>
+	</div>
+	<script>
+		function revealEmail() {
+			var encode = "hello@ravindu.cc;";
+			var decoded = "";
+			for (var i = 0; i < encode.length; i++) {
+				decoded += String.fromCharCode(encode.charCodeAt(i) - 1);
+			}
+			window.location.href = "mailto:" + decoded;
+		}
+	</script>
+</body>
+</html>
