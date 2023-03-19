@@ -22,15 +22,35 @@
       font-size: 4rem;
       margin: 0;
       margin-top: 2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      /* letter-spacing: 0.15em; */
+      animation: typing 4s steps(50, end), blink 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink {
+      from, to { border-right-color: transparent }
+      50% { border-right-color: white }
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      margin-top: 2rem;
     }
     
     .button {
       display: inline-block;
       margin: 0 0.5rem;
-      padding: 10px 20px;
+      padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 50px;
-      font-size: 15px;
+      font-size: 1.5rem;
       color: white;
       text-decoration: none;
       text-align: center;
@@ -48,11 +68,11 @@
     .button-email {
       background-color: #dd4b39;
     }
-
-	.button-blog {
-      background-color: #396ddd;
-    }
     
+	.button-blog {
+      background-color: #456fdc;
+    }
+
     .button:hover {
       background-color: white;
       color: black;
@@ -68,9 +88,16 @@
         font-size: 3rem;
       }
       
+      .button-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      
       .button {
         font-size: 1rem;
         padding: 0.5rem 1rem;
+        margin: 0.5rem;
       }
       
       .ascii-art {
@@ -135,10 +162,10 @@
   </div>
   <h1>I am Ravindu</h1>
   <div class="buttons">
-    <a class="button button-linkedin" href="#">LinkedIn</a>
-    <a class="button button-github" href="#">GitHub</a>
-	<a class="button button-blog" href="#">Blog</a>
-    <a class="button button-email" href="#">Email</a>
+    <a class="button button-linkedin" href="https://www.linkedin.com/in/ravinduchamara/">LinkedIn</a>
+    <a class="button button-github" href="https://github.com/shadow104">GitHub</a>
+	<a class="button button-blog" href="https://blog.ravindu.cc">Blog</a>
+    <a class="button button-email" href="mailto:hello@ravindu.cc">Email</a>
   </div>
 </body>
 </html>
